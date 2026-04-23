@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
-import anthropic
 import smtplib
 import re
 import os
@@ -12,12 +11,8 @@ app = Flask(__name__)
 
 limiter = Limiter(get_remote_address, app=app, default_limits=[])
 
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
-
 EMAIL_USER = os.environ.get("EMAIL_USER")
 EMAIL_PASS = os.environ.get("EMAIL_PASS")
-
-# ── Routes ────────────────────────────────────────
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -58,33 +53,14 @@ def send_message():
     spam_words = ["casino", "crypto", "bitcoin", "loan", "win money", "click here"]
     if any(word in message.lower() for word in spam_words):
         return jsonify({"error": "Your message looks like spam. Please try again."}), 400
-
-    # AI reply
     ai_reply = f"Hi {name}, thanks for reaching out! I've received your message and will get back to you soon. — Pasupathi Ragavan"
-    try:
-        response = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=200,
-            messages=[{
-                "role": "user",
-                "content": (
-                    f"Someone submitted a contact form on Pasupathi Ragavan's portfolio. "
-                    f"Write a warm, friendly thank you reply. Mention their name. "
-                    f"Reference what they said briefly. Sign off as Pasupathi Ragavan. Under 70 words.\n\n"
-                    f"Name: {name}\nEmail: {email}\nMessage: {message}"
-                )
-            }]
-        )
-        ai_reply = response.content[0].text
-    except Exception:
-        pass
 
     # Send emails via Gmail SMTP
     try:
         if EMAIL_USER and EMAIL_PASS:
             # Email to Pasupathi (notification)
             notify = MIMEMultipart()
-            notify["Subject"] = f"📬 New Portfolio Message from {name}"
+            notify["Subject"] = f"New Portfolio Message from {name}"
             notify["From"]    = EMAIL_USER
             notify["To"]      = EMAIL_USER
             notify.attach(MIMEText(

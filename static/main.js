@@ -104,17 +104,10 @@ if (contactForm) {
     formData.append('email', email);
     formData.append('message', message);
 
-    const formspreePromise = fetch('https://formspree.io/f/mnjlqnvg', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new URLSearchParams({ name, email, message })
-    });
-
     const aiPromise = fetch('/send-message', { method: 'POST', body: formData });
 
     try {
-      const [, aiRes] = await Promise.all([formspreePromise, aiPromise]);
-
+      const aiRes = await aiPromise;
       if (aiRes.status === 429) {
         showToast('Please wait a few seconds before sending again ⏳', 'error');
         btn.textContent = 'Send Message';
@@ -131,13 +124,16 @@ if (contactForm) {
         return;
       }
 
-      // Show AI reply
       document.getElementById('replyText').textContent = data.reply;
       document.getElementById('aiReply').style.display = 'block';
 
       showToast("Thanks! Your message has been sent 😊", 'success');
       this.reset();
       btn.textContent = 'Message Sent ✓';
+      setTimeout(() => {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      }, 10000);
 
     } catch (err) {
       showToast('Oops! Something went wrong. Please try again.', 'error');
