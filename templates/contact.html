@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Contact — Pasupathi Ragavan{% endblock %}
+{% block content %}
+
+<section class="page-hero fade-in">
+  <h1>Get in <em>Touch</em></h1>
+  <p>Open to embedded systems roles, IoT projects, and collaborations.</p>
+</section>
+
+<section class="contact-grid fade-in">
+  <div class="contact-info">
+    <h2>Let's work together</h2>
+    <p>Whether you have a project in mind, want to collaborate on IoT systems, or just want to say hello — feel free to reach out anytime.</p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <strong>Email</strong>
+        <a href="mailto:pasupathiragavan2004@gmail.com">pasupathiragavan2004@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <strong>Phone</strong>
+        <a href="tel:+918610033011">+91 8610033011</a>
+      </div>
+      <div class="contact-item">
+        <strong>Location</strong>
+        <span>Coimbatore, Tamil Nadu, India</span>
+      </div>
+      <div class="contact-item">
+        <strong>Availability</strong>
+        <span class="available-dot">Open to opportunities</span>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/pasupathi-ragavan-t-5660a1238" target="_blank">LinkedIn</a>
+      <a href="mailto:pasupathiragavan2004@gmail.com">Email</a>
+      <a href="https://github.com/PasupathiRagavanT" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name"/>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"/>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+
+    <div id="aiReply" class="ai-reply-box" style="display:none;">
+      <p class="ai-reply-label">✦ Reply from Pasupathi</p>
+      <p id="replyText"></p>
+    </div>
+  </form>
+</section>
+
+{% endblock %}

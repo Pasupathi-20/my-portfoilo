@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Pasupathi Ragavan — Embedded & IoT Engineer{% endblock %}
+{% block content %}
+
+<section class="hero" id="home">
+  <div class="hero-inner fade-in">
+    <span class="hero-tag">Open to Opportunities</span>
+    <h1>Hi, I'm <em>Pasupathi Ragavan</em> —<br><span id="typingText" class="typing"></span></h1>
+    <p class="hero-sub">Hands-on experience with Raspberry Pi, ESP8266, NodeMCU & Arduino. Building smart IoT solutions from Coimbatore, Tamil Nadu.</p>
+    <div class="hero-actions">
+      <a href="/projects" class="btn btn-primary">View Projects</a>
+      <a href="/contact" class="btn btn-ghost">Get in Touch</a>
+      <a href="/static/Pasupathi_Ragavan_CV.pdf" download class="btn btn-cv">⬇ Download CV</a>
+    </div>
+  </div>
+  <div class="hero-deco" aria-hidden="true">
+    <div class="deco-ring deco-ring-1"></div>
+    <div class="deco-ring deco-ring-2"></div>
+    <div class="deco-dot"></div>
+  </div>
+</section>
+
+<section class="skills-strip fade-in">
+  <span>Raspberry Pi</span><span>ESP8266</span><span>NodeMCU</span>
+  <span>Arduino</span><span>Python</span><span>Flask</span>
+  <span>C / C++</span><span>IoT</span><span>PCB Design</span>
+  <span>UART / SPI / I2C</span><span>EasyEDA</span><span>PLC</span>
+</section>
+
+<section class="skills-progress-section fade-in">
+  <h2>Technical Skills</h2>
+  <div class="skills-progress-grid">
+    <div class="skill-col">
+      <h4>Hardware & Microcontrollers</h4>
+      <div class="skill-bar-group">
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Raspberry Pi</span><span>90%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>ESP8266 / NodeMCU</span><span>85%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Arduino</span><span>88%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>PCB Design (EasyEDA)</span><span>75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="skill-col">
+      <h4>Programming & Web</h4>
+      <div class="skill-bar-group">
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>C / C++</span><span>82%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Python</span><span>70%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="70"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>Flask</span><span>65%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div>
+        </div>
+        <div class="skill-bar-item">
+          <div class="skill-bar-label"><span>IoT / Cloud</span><span>80%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured fade-in">
+  <h2>Featured Projects</h2>
+  <div class="cards">
+    <a href="/projects" class="card">
+      <div class="card-tag">Arduino / IoT</div>
+      <h3>Rain Sensing Car Wiper</h3>
+      <p>Arduino-based system that detects rainfall and automatically activates windshield wipers for safer driving.</p>
+      <span class="card-link">View project →</span>
+    </a>
+    <a href="/projects" class="card">
+      <div class="card-tag">IoT / Cloud</div>
+      <h3>Bridge Health Monitoring</h3>
+      <p>IoT & sensor network system for real-time bridge structural health monitoring with mobile safety alerts.</p>
+      <span class="card-link">View project →</span>
+    </a>
+    <a href="/projects" class="card">
+      <div class="card-tag">ESP8266 / NodeMCU</div>
+      <h3>Circuit Breaker Monitoring</h3>
+      <p>IoT-based circuit breaker system for lineman protection with fault detection and remote control.</p>
+      <span class="card-link">View project →</span>
+    </a>
+  </div>
+</section>
+
+{% endblock %}
