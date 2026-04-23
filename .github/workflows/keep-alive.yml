@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Ping Render server
         run: |
-          curl -s https://pasupathi-portfolio.onrender.com/ping || echo "Ping failed"
+          curl -s https://https://pasupathis-portfoilo.onrender.com/ping || echo "Ping failed"
