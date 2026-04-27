@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Blog — Pasupathi Ragavan T {% endblock %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <h1>My <em>Blog</em></h1>
+    <p>Deep dives into embedded systems, IoT, and problem-solving.</p>
+</section>
+
+<div class="blog-grid">
+    {% for post in posts %}
+    <article class="blog-card fade-in">
+        <div class="blog-card-image">
+            <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+            <span class="blog-category-badge">{{ post.category }}</span>
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-meta">
+                <span>📅 {{ post.date }}</span>
+                <span>⏱️ {{ post.read_time }} min</span>
+            </div>
+            <h3><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+            <a href="/blog/{{ post.slug }}" class="read-more">Read Article →</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

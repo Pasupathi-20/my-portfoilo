@@ -1,80 +1,88 @@
 {% extends "base.html" %}
-{% block title %}Pasupathi Ragavan — Embedded & IoT Engineer{% endblock %}
-{% block content %}
+{% block title %}Pasupathi Ragavan T — Embedded & IoT Engineer{% endblock %}
+{% block meta_desc %}Pasupathi Ragavan T — Embedded Systems & IoT Engineer specializing in Raspberry Pi, ESP8266, and Flask-powered IoT solutions from Coimbatore.{% endblock %}
 
-<section class="hero" id="home">
+{% block content %}
+<!-- ── HERO SECTION ──────────────────────────────────── -->
+<section class="hero">
   <div class="hero-inner fade-in">
     <span class="hero-tag">Open to Opportunities</span>
-    <h1>Hi, I'm <em>Pasupathi Ragavan</em> —<br><span id="typingText" class="typing"></span></h1>
+    <h1>Hi, I'm <em>Pasupathi Ragavan Thetharasan</em> — <span class="typing" id="typingText"></span></h1>
     <p class="hero-sub">Hands-on experience with Raspberry Pi, ESP8266, NodeMCU & Arduino. Building smart IoT solutions from Coimbatore, Tamil Nadu.</p>
+    
     <div class="hero-actions">
       <a href="/projects" class="btn btn-primary">View Projects</a>
       <a href="/contact" class="btn btn-ghost">Get in Touch</a>
-      <a href="/static/Pasupathi_Ragavan_CV.pdf" download class="btn btn-cv">⬇ Download CV</a>
+      <a href="/static/Pasupathi Ragavan T.pdf" class="btn-cv" download>⬇ Download CV</a>
     </div>
   </div>
-  <div class="hero-deco" aria-hidden="true">
+  
+  <div class="hero-deco">
     <div class="deco-ring deco-ring-1"></div>
     <div class="deco-ring deco-ring-2"></div>
     <div class="deco-dot"></div>
   </div>
 </section>
 
-<section class="skills-strip fade-in">
-  <span>Raspberry Pi</span><span>ESP8266</span><span>NodeMCU</span>
-  <span>Arduino</span><span>Python</span><span>Flask</span>
-  <span>C / C++</span><span>IoT</span><span>PCB Design</span>
-  <span>UART / SPI / I2C</span><span>EasyEDA</span><span>PLC</span>
-</section>
+<!-- ── SKILLS STRIP ──────────────────────────────────── -->
+<div class="skills-strip fade-in">
+  <span>Raspberry Pi</span><span>ESP8266</span><span>NodeMCU</span><span>Arduino</span>
+  <span>Python</span><span>Flask</span><span>C / C++</span><span>IoT</span>
+  <span>PCB Design</span><span>UART / SPI / I2C</span><span>EasyEDA</span><span>PLC</span>
+</div>
 
-<section class="skills-progress-section fade-in">
+<!-- ── SKILLS PROGRESS BARS ──────────────────────────── -->
+<section class="featured fade-in">
   <h2>Technical Skills</h2>
-  <div class="skills-progress-grid">
-    <div class="skill-col">
-      <h4>Hardware & Microcontrollers</h4>
-      <div class="skill-bar-group">
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Raspberry Pi</span><span>90%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>ESP8266 / NodeMCU</span><span>85%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Arduino</span><span>88%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>PCB Design (EasyEDA)</span><span>75%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
+  <div class="skills-progress-section">
+    <div class="skills-progress-grid">
+      <div class="skill-col">
+        <h4>Hardware & Microcontrollers</h4>
+        <div class="skill-bar-group">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Raspberry Pi</span><span>90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>ESP8266 / NodeMCU</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Arduino</span><span>88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="88"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>PCB Design (EasyEDA)</span><span>75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="skill-col">
-      <h4>Programming & Web</h4>
-      <div class="skill-bar-group">
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>C / C++</span><span>82%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Python</span><span>70%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="70"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>Flask</span><span>65%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-label"><span>IoT / Cloud</span><span>80%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
+      <div class="skill-col">
+        <h4>Programming & Web</h4>
+        <div class="skill-bar-group">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>C / C++</span><span>82%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="82"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Python</span><span>70%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="70"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Flask</span><span>65%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="65"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>IoT / Cloud</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ── FEATURED PROJECTS ─────────────────────────────── -->
 <section class="featured fade-in">
   <h2>Featured Projects</h2>
   <div class="cards">
@@ -98,5 +106,4 @@
     </a>
   </div>
 </section>
-
 {% endblock %}

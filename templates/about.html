@@ -1,108 +1,90 @@
 {% extends "base.html" %}
-{% block title %}About — Pasupathi Ragavan{% endblock %}
+{% block title %}About — Pasupathi Ragavan T{% endblock %}
+{% block meta_desc %}Learn about Pasupathi Ragavan's background in Embedded Systems, IoT development, and professional experience at Imai Technologies.{% endblock %}
+
 {% block content %}
-
-<section class="page-hero">
-  <h1>About <em>Me</em></h1>
-  <p>Embedded Systems Engineer · IoT Developer · Electronics Technician</p>
+<section class="page-hero fade-in">
+    <h1>About <em>Me</em></h1>
+    <p>Embedded Systems Engineer · IoT Developer · Electronics Technician</p>
 </section>
 
-<section class="about-grid">
-  <div class="about-text">
-    <h2>My Story</h2>
-    <p>I'm a motivated and technically skilled engineer with hands-on experience in embedded systems, IoT devices, and industrial electronics. I hold a B.E in Electronics and Communication Engineering from Coimbatore Institute of Engineering and Technology.</p>
-    <p>Skilled in working with Raspberry Pi, ESP8266, NodeMCU, and Arduino, with expertise in troubleshooting, testing, and system installation. I'm currently working as an Embedded Support Engineer at Imai Technologies.</p>
-    <p>I'm also building skills in Python and Flask to expand into web-connected IoT solutions and dashboards.</p>
-    <a href="/contact" class="btn btn-primary" style="margin-top:1.5rem;">Let's Connect</a>
-  </div>
-  <div class="about-stats">
-    <div class="stat"><span class="stat-num">4+</span><span class="stat-label">IoT Projects</span></div>
-    <div class="stat"><span class="stat-num">1+</span><span class="stat-label">Yr Experience</span></div>
-    <div class="stat"><span class="stat-num">2</span><span class="stat-label">Companies</span></div>
-    <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Tech Skills</span></div>
-  </div>
+<div class="about-grid fade-in">
+    <div class="about-text">
+        <h2>My Story</h2>
+        <p>I'm a motivated and technically skilled engineer with hands-on experience in embedded systems, IoT devices, and industrial electronics. I hold a B.E in Electronics and Communication Engineering from Coimbatore Institute of Engineering and Technology.</p>
+        <p>Skilled in working with Raspberry Pi, ESP8266, NodeMCU, and Arduino, with expertise in troubleshooting, testing, and system installation. I'm currently working as an Embedded Support Engineer at Imai Technologies.</p>
+        <p>I'm also building skills in Python and Flask to expand into web-connected IoT solutions and dashboards.</p>
+        <a href="/contact" class="btn btn-primary" style="margin-top: 1rem;">Let's Connect</a>
+    </div>
+    <div class="about-stats">
+        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">IoT Projects</span></div>
+        <div class="stat"><span class="stat-num">1+</span><span class="stat-label">Yr Experience</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Companies</span></div>
+        <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Tech Skills</span></div>
+    </div>
+</div>
+
+<section class="skills-section fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-group"><h4>Microcontrollers</h4><div class="skill-tags"><span>Raspberry Pi</span><span>ESP8266</span><span>NodeMCU</span><span>Arduino</span></div></div>
+        <div class="skill-group"><h4>Programming</h4><div class="skill-tags"><span>Python</span><span>Flask</span><span>C</span><span>C++</span></div></div>
+        <div class="skill-group"><h4>IoT & Cloud</h4><div class="skill-tags"><span>Sensor Interfacing</span><span>Data Monitoring</span><span>Cloud Connectivity</span><span>Wi-Fi Control</span></div></div>
+        <div class="skill-group"><h4>Circuit & Hardware</h4><div class="skill-tags"><span>PCB Design (EasyEDA)</span><span>Soldering</span><span>Wiring</span><span>Relay Control</span></div></div>
+        <div class="skill-group"><h4>Communication Protocols</h4><div class="skill-tags"><span>UART</span><span>SPI</span><span>I2C</span><span>Wi-Fi</span></div></div>
+        <div class="skill-group"><h4>Other</h4><div class="skill-tags"><span>PLC (Basic)</span><span>Troubleshooting</span><span>Field Testing</span></div></div>
+    </div>
 </section>
 
-<section class="skills-section">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-group">
-      <h4>Microcontrollers</h4>
-      <div class="skill-tags"><span>Raspberry Pi</span><span>ESP8266</span><span>NodeMCU</span><span>Arduino</span></div>
+<section class="timeline-section fade-in">
+    <h2>Experience</h2>
+    <div class="timeline">
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+                <span class="tl-date">Apr 2025 – Present</span>
+                <h3>Embedded Support Engineer — Imai Technologies</h3>
+                <p>Assembled, wired, and tested IoT and electronic systems. Configured Raspberry Pi GPIO pins for controlling relays, lights, and sensors. Programmed ESP8266 and NodeMCU for Wi-Fi-based device control and data transfer. Performed troubleshooting and maintenance of electrical and electronic equipment.</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+                <span class="tl-date">Jul 2023 – Aug 2023</span>
+                <h3>Student Trainee — Enthu Technology</h3>
+                <p>Worked on Raspberry Pi, ESP32, and LoRa-based IoT projects. Developed real-time monitoring systems using sensors and cloud data logging. Assisted in assembling, wiring, and testing circuits. Gained practical experience in embedded programming, sensor interfacing, and communication protocols.</p>
+            </div>
+        </div>
     </div>
-    <div class="skill-group">
-      <h4>Programming</h4>
-      <div class="skill-tags"><span>Python</span><span>Flask</span><span>C</span><span>C++</span></div>
-    </div>
-    <div class="skill-group">
-      <h4>IoT & Cloud</h4>
-      <div class="skill-tags"><span>Sensor Interfacing</span><span>Data Monitoring</span><span>Cloud Connectivity</span><span>Wi-Fi Control</span></div>
-    </div>
-    <div class="skill-group">
-      <h4>Circuit & Hardware</h4>
-      <div class="skill-tags"><span>PCB Design (EasyEDA)</span><span>Soldering</span><span>Wiring</span><span>Relay Control</span></div>
-    </div>
-    <div class="skill-group">
-      <h4>Communication Protocols</h4>
-      <div class="skill-tags"><span>UART</span><span>SPI</span><span>I2C</span><span>Wi-Fi</span></div>
-    </div>
-    <div class="skill-group">
-      <h4>Other</h4>
-      <div class="skill-tags"><span>PLC (Basic)</span><span>Troubleshooting</span><span>Field Testing</span></div>
-    </div>
-  </div>
 </section>
 
-<section class="timeline-section">
-  <h2>Experience</h2>
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-body">
-        <span class="tl-date">Apr 2025 – Present</span>
-        <h3>Embedded Support Engineer — Imai Technologies</h3>
-        <p>Assembled, wired, and tested IoT and electronic systems. Configured Raspberry Pi GPIO pins for controlling relays, lights, and sensors. Programmed ESP8266 and NodeMCU for Wi-Fi-based device control and data transfer. Performed troubleshooting and maintenance of electrical and electronic equipment.</p>
-      </div>
+<section class="timeline-section fade-in">
+    <h2>Education</h2>
+    <div class="timeline">
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+                <span class="tl-date">2025</span>
+                <h3>B.E – Electronics and Communication Engineering</h3>
+                <p>Coimbatore Institute of Engineering and Technology · CGPA: 7.35</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+                <span class="tl-date">2021</span>
+                <h3>Senior Secondary Certificate (CBSE)</h3>
+                <p>ABCS KenBridge School · 58.4%</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-body">
+                <span class="tl-date">2019</span>
+                <h3>Secondary School Examination (CBSE)</h3>
+                <p>ABCS KenBridge School · 48.4%</p>
+            </div>
+        </div>
     </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-body">
-        <span class="tl-date">Jul 2023 – Aug 2023</span>
-        <h3>Student Trainee — Enthu Technology</h3>
-        <p>Worked on Raspberry Pi, ESP32, and LoRa-based IoT projects. Developed real-time monitoring systems using sensors and cloud data logging. Assisted in assembling, wiring, and testing circuits. Gained practical experience in embedded programming, sensor interfacing, and communication protocols.</p>
-      </div>
-    </div>
-  </div>
 </section>
-
-<section class="timeline-section">
-  <h2>Education</h2>
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-body">
-        <span class="tl-date">2025</span>
-        <h3>B.E – Electronics and Communication Engineering</h3>
-        <p>Coimbatore Institute of Engineering and Technology &nbsp;·&nbsp; CGPA: 7.35</p>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-body">
-        <span class="tl-date">2021</span>
-        <h3>Senior Secondary Certificate (CBSE)</h3>
-        <p>ABCS KenBridge School &nbsp;·&nbsp; 58.4%</p>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-body">
-        <span class="tl-date">2019</span>
-        <h3>Secondary School Examination (CBSE)</h3>
-        <p>ABCS KenBridge School &nbsp;·&nbsp; 48.4%</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 {% endblock %}

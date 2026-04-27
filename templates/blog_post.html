@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<article class="blog-post fade-in">
+    <header class="blog-post-header">
+        <div class="blog-post-meta">
+            <span class="blog-category-badge">{{ post.category }}</span>
+            <span>📅 {{ post.date }}</span>
+        </div>
+        <h1>{{ post.title }}</h1>
+        
+        <div class="blog-author">
+            <img src="https://ui-avatars.com/api/?name=Pasupathi+Ragavan&background=c8a96e&color=1a1200" alt="Author" class="author-avatar">
+            <div>
+                <strong>Pasupathi Ragavan</strong>
+                <p>Embedded Systems & IoT Engineer</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-post-content">
+        {{ post.content | safe }}
+    </div>
+
+    <div class="blog-post-tags">
+        <a href="{{ post.github }}" class="btn btn-ghost" target="_blank">View Code on GitHub</a>
+    </div>
+
+    <div class="blog-post-nav">
+        {% if prev_post %}
+        <a href="/blog/{{ prev_post.slug }}">← {{ prev_post.title }}</a>
+        {% else %}
+        <span></span>
+        {% endif %}
+        
+        {% if next_post %}
+        <a href="/blog/{{ next_post.slug }}">{{ next_post.title }} →</a>
+        {% endif %}
+    </div>
+</article>
+{% endblock %}

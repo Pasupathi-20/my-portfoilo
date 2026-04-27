@@ -1,133 +1,99 @@
 {% extends "base.html" %}
-{% block title %}Projects — Pasupathi Ragavan{% endblock %}
+{% block title %}Projects — Pasupathi Ragavan T{% endblock %}
+{% block meta_desc %}Explore Pasupathi Ragavan's real-world embedded systems and IoT projects including Arduino wipers, bridge monitoring, and circuit breakers.{% endblock %}
+
 {% block content %}
-
-<section class="page-hero">
-  <h1>My <em>Projects</em></h1>
-  <p>Real-world embedded systems and IoT solutions I've built.</p>
+<section class="page-hero fade-in">
+    <h1>My <em>Projects</em></h1>
+    <p>Real-world embedded systems and IoT solutions I've built.</p>
 </section>
 
-<section class="projects-grid">
+<div class="projects-grid fade-in">
+    <div class="project-card">
+        <div class="project-img-wrap">
+            <img src="" alt="Rain Sensing Car Wiper" class="project-img" loading="lazy">
+        </div>
+        <div class="project-body">
+            <div class="project-header">
+                <span class="badge badge-arduino">Arduino Project</span>
+                <div class="project-links"><a href="https://github.com/Pasupathi-20/my-projects/tree/main/rain-sensing-wipe" target="_blank">GitHub →</a></div>
+            </div>
+            <h3>Automatic Rain Sensing Car Wiper</h3>
+            <p>Utilizes an Arduino microcontroller to detect rainfall through a rain sensor, automatically activating windshield wipers for safer driving without manual input.</p>
+            <div class="tech-tags"><span>Arduino</span><span>Rain Sensor</span><span>Servo Motor</span><span>C++</span></div>
+        </div>
+    </div>
 
-  <div class="project-card">
-    <div class="project-img-wrap">
-      <img
-        src="https://www.srrobots.com/wp-content/uploads/2023/06/rain-sensing-wiper.jpg"
-        alt="Automatic Rain Sensing Car Wiper"
-        class="project-img"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-      />
-      <div class="project-img-fallback" style="display:none">Arduino Project</div>
+    <div class="project-card">
+        <div class="project-img-wrap">
+            <img src="" alt="Bridge Health Monitoring" class="project-img" loading="lazy">
+        </div>
+        <div class="project-body">
+            <div class="project-header">
+                <span class="badge badge-iot">IoT / Cloud</span>
+                <div class="project-links"><a href="https://github.com/Pasupathi-20/my-projects/tree/main/bridge-monitoring" target="_blank">GitHub →</a></div>
+            </div>
+            <h3>IoT Based Bridge Health Monitoring & Alerting</h3>
+            <p>Leverages IoT, sensor networks, cloud computation, and mobile platforms to enhance bridge structural health monitoring and send real-time safety alerts.</p>
+            <div class="tech-tags"><span>IoT</span><span>NodeMCU</span><span>Cloud</span><span>Sensors</span><span>Python</span></div>
+        </div>
     </div>
-    <div class="project-body">
-      <div class="project-header">
-        <span class="badge badge-arduino">Arduino</span>
-        <div class="project-links"><a href="#">GitHub</a></div>
-      </div>
-      <h3>Automatic Rain Sensing Car Wiper</h3>
-      <p>Utilizes an Arduino microcontroller to detect rainfall through a rain sensor, automatically activating windshield wipers for safer driving without manual input.</p>
-      <div class="tech-tags">
-        <span>Arduino</span><span>Rain Sensor</span><span>Servo Motor</span><span>C++</span>
-      </div>
-    </div>
-  </div>
 
-  <div class="project-card">
-    <div class="project-img-wrap">
-      <img
-        src="https://aumraj.com/wp-content/uploads/2023/10/Real-Time-Bridge-Health-Monitoring-and-Alert-System-Using-IoT.jpg"
-        alt="IoT Bridge Health Monitoring"
-        class="project-img"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-      />
-      <div class="project-img-fallback" style="display:none">IoT / Cloud</div>
+    <div class="project-card">
+        <div class="project-img-wrap">
+            <img src="" alt="Circuit Breaker Monitoring" class="project-img" loading="lazy">
+        </div>
+        <div class="project-body">
+            <div class="project-header">
+                <span class="badge badge-esp">ESP8266 / NodeMCU</span>
+                <div class="project-links"><a href="https://github.com/Pasupathi-20/my-projects/tree/main/circuit-breaker-iot" target="_blank">GitHub →</a></div>
+            </div>
+            <h3>IoT Based Circuit Breaker Monitoring & Control</h3>
+            <p>IoT-based circuit breaker system designed for lineman protection in power distribution lines — reliable fault detection, system reset, and remote user interface management.</p>
+            <div class="tech-tags"><span>ESP8266</span><span>NodeMCU</span><span>Flask</span><span>Python</span><span>IoT</span></div>
+        </div>
     </div>
-    <div class="project-body">
-      <div class="project-header">
-        <span class="badge badge-iot">IoT / Cloud</span>
-        <div class="project-links"><a href="#">GitHub</a></div>
-      </div>
-      <h3>IoT Based Bridge Health Monitoring & Alerting</h3>
-      <p>Leverages IoT, sensor networks, cloud computation, and mobile platforms to enhance bridge structural health monitoring and send real-time safety alerts.</p>
-      <div class="tech-tags">
-        <span>IoT</span><span>NodeMCU</span><span>Cloud</span><span>Sensors</span><span>Python</span>
-      </div>
-    </div>
-  </div>
 
-  <div class="project-card">
-    <div class="project-img-wrap">
-      <img
-        src="https://svskits.in/wp-content/uploads/2020/06/IOT-Circuit-Breaker-Project-Using-NodeMCU-ESP8266.jpg"
-        alt="IoT Circuit Breaker Monitoring"
-        class="project-img"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-      />
-      <div class="project-img-fallback" style="display:none">ESP8266 / NodeMCU</div>
+    <div class="project-card">
+        <div class="project-img-wrap">
+            <img src="" alt="Boom Barrier Position Detection" class="project-img" loading="lazy">
+        </div>
+        <div class="project-body">
+            <div class="project-header">
+                <span class="badge badge-sensor">NodeMCU / MPU6050</span>
+                <div class="project-links"><a href="https://github.com/Pasupathi-20/my-projects/tree/main/Booms-barrier-mpu6050" target="_blank">GitHub →</a></div>
+            </div>
+            <h3>Boom Barrier Position Detection — MPU6050 & NodeMCU</h3>
+            <p>System using MPU6050 accelerometer/gyroscope with NodeMCU to detect boom barrier arm positions. Uses pitch-angle thresholds to determine if the barrier is open, closing, or closed — ideal for automated parking gates.</p>
+            <div class="tech-tags"><span>MPU6050</span><span>NodeMCU</span><span>ESP8266</span><span>C++</span><span>Python</span></div>
+        </div>
     </div>
-    <div class="project-body">
-      <div class="project-header">
-        <span class="badge badge-esp">ESP8266</span>
-        <div class="project-links"><a href="#">GitHub</a></div>
-      </div>
-      <h3>IoT Based Circuit Breaker Monitoring & Control</h3>
-      <p>IoT-based circuit breaker system designed for lineman protection in power distribution lines — reliable fault detection, system reset, and remote user interface management.</p>
-      <div class="tech-tags">
-        <span>ESP8266</span><span>NodeMCU</span><span>Flask</span><span>Python</span><span>IoT</span>
-      </div>
-    </div>
-  </div>
+</div>
 
-  <div class="project-card">
-    <div class="project-img-wrap">
-      <img
-        src="https://how2electronics.com/wp-content/uploads/2021/09/IoT-based-Fall-Detection-using-NodeMCU-ESP8266-and-Accelerometer-MPU6050.jpg"
-        alt="Boom Barrier Detection MPU6050"
-        class="project-img"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-      />
-      <div class="project-img-fallback" style="display:none">NodeMCU / MPU6050</div>
+<section class="achievements fade-in">
+    <h2>Achievements & Awards</h2>
+    <div class="achievement-list">
+        <div class="achievement-item">
+            <span class="ach-icon">🏆</span>
+            <div>
+                <h4>National Conference on CIET</h4>
+                <p>Attended and participated in the national-level conference held at CIET.</p>
+            </div>
+        </div>
+        <div class="achievement-item">
+            <span class="ach-icon">💡</span>
+            <div>
+                <h4>Smart India Hackathon</h4>
+                <p>Participated in Smart India Hackathon at CIET, competing with innovative IoT solutions.</p>
+            </div>
+        </div>
+        <div class="achievement-item">
+            <span class="ach-icon">🛠️</span>
+            <div>
+                <h4>PCB Design Workshop — EasyEDA</h4>
+                <p>Completed a hands-on workshop in PCB designing using EasyEDA.</p>
+            </div>
+        </div>
     </div>
-    <div class="project-body">
-      <div class="project-header">
-        <span class="badge badge-sensor">Sensor</span>
-        <div class="project-links"><a href="#">GitHub</a></div>
-      </div>
-      <h3>Boom Barrier Position Detection — MPU6050 & NodeMCU</h3>
-      <p>System using MPU6050 accelerometer/gyroscope with NodeMCU to detect boom barrier arm positions. Uses pitch-angle thresholds to determine if the barrier is open, closing, or closed — ideal for automated parking gates.</p>
-      <div class="tech-tags">
-        <span>MPU6050</span><span>NodeMCU</span><span>ESP8266</span><span>C++</span><span>Python</span>
-      </div>
-    </div>
-  </div>
-
 </section>
-
-<section class="achievements">
-  <h2>Achievements & Awards</h2>
-  <div class="achievement-list">
-    <div class="achievement-item">
-      <span class="ach-icon">🏆</span>
-      <div>
-        <h4>National Conference on CIET</h4>
-        <p>Attended and participated in the national-level conference held at CIET.</p>
-      </div>
-    </div>
-    <div class="achievement-item">
-      <span class="ach-icon">💡</span>
-      <div>
-        <h4>Smart India Hackathon</h4>
-        <p>Participated in Smart India Hackathon at CIET, competing with innovative IoT solutions.</p>
-      </div>
-    </div>
-    <div class="achievement-item">
-      <span class="ach-icon">🛠️</span>
-      <div>
-        <h4>PCB Design Workshop — EasyEDA</h4>
-        <p>Completed a hands-on workshop in PCB designing using EasyEDA.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 {% endblock %}
