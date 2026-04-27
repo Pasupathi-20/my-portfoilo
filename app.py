@@ -189,6 +189,11 @@ def send_message():
     ai_reply = f"Hi {name}, thanks for reaching out! I've received your message and will get back to you soon. — Pasupathi Ragavan"
 
     # Send emails via Gmail SMTP
+    if not EMAIL_USER or not EMAIL_PASS:
+        return jsonify({
+            "error": "Email service is not configured on server. Set EMAIL_USER and EMAIL_PASS."
+        }), 500
+
     try:
         if EMAIL_USER and EMAIL_PASS:
             # 1. Notification to you
