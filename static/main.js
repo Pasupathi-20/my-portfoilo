@@ -113,7 +113,7 @@ if (typingEl) {
 }
 
 // ── Back to Top Button ───────────────────────────
-c// ── Back to Top (Deep Scroll + Glassmorphism) ─────────────────────────
+// ── Back to Top (Deep Scroll + Glassmorphism) ─────────────────────────
 const backToTop = document.getElementById('backToTop');
 if (backToTop) {
   const showThreshold = 600; // px to consider "deep scroll"
