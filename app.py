@@ -9,14 +9,11 @@ from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__)
 
-# Rate limiter: prevents form abuse & server overload
 limiter = Limiter(get_remote_address, app=app, default_limits=[])
 
-# Environment variables (set in Render dashboard)
 EMAIL_USER = os.environ.get("EMAIL_USER")
 EMAIL_PASS = os.environ.get("EMAIL_PASS")
 
-# Add this to app.py (before your routes)
 
 BLOG_POSTS = [
     {
@@ -154,14 +151,12 @@ def blog_post(slug):
     post = next((p for p in BLOG_POSTS if p["slug"] == slug), None)
     if not post: return "Post not found", 404
     
-    # Find prev/next posts
     idx = BLOG_POSTS.index(post)
     prev_post = BLOG_POSTS[idx - 1] if idx > 0 else None
     next_post = BLOG_POSTS[idx + 1] if idx < len(BLOG_POSTS) - 1 else None
     
     return render_template("blog_post.html", post=post, prev_post=prev_post, next_post=next_post)
 
-# ── Contact Form Backend ──────────────────────────
 @app.route("/send-message", methods=["POST"])
 @limiter.limit("5 per minute")
 def send_message():
@@ -169,7 +164,6 @@ def send_message():
     email   = request.form.get("email", "").strip()
     message = request.form.get("message", "").strip()
 
-    # Basic validation
     if not name or not email or not message:
         return jsonify({"error": "Please fill in all fields."}), 400
     if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
@@ -177,18 +171,15 @@ def send_message():
     if len(message) < 10:
         return jsonify({"error": "Message is too short. Please tell me more!"}), 400
 
-    # Honeypot spam check
     if request.form.get("website"):
         return jsonify({"error": "Spam detected."}), 400
 
-    # Keyword spam filter
     spam_words = ["casino", "crypto", "bitcoin", "loan", "win money", "click here", "prize", "viagra"]
     if any(word in message.lower() for word in spam_words):
         return jsonify({"error": "Your message looks like spam. Please try again."}), 400
 
     ai_reply = f"Hi {name}, thanks for reaching out! I've received your message and will get back to you soon. — Pasupathi Ragavan"
 
-    # Send emails via Gmail SMTP
     if not EMAIL_USER or not EMAIL_PASS:
         return jsonify({
             "error": "Email service is not configured on server. Set EMAIL_USER and EMAIL_PASS."
@@ -196,7 +187,6 @@ def send_message():
 
     try:
         if EMAIL_USER and EMAIL_PASS:
-            # 1. Notification to you
             notify = MIMEMultipart()
             notify["Subject"] = f"New Portfolio Message from {name}"
             notify["From"]    = EMAIL_USER
@@ -205,7 +195,6 @@ def send_message():
                 f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}", "plain"
             ))
 
-            # 2. Auto-reply to visitor
             autoreply = MIMEMultipart()
             autoreply["Subject"] = "Thanks for contacting Pasupathi Ragavan!"
             autoreply["From"]    = EMAIL_USER
@@ -217,7 +206,6 @@ def send_message():
                 server.send_message(notify)
                 server.send_message(autoreply)
     except Exception as e:
-        # Log error silently; still return success to user to avoid UX friction
         print(f"📧 Email delivery error: {e}")
 
     return jsonify({"reply": ai_reply})
