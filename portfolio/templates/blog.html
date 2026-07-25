@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Blog & Research — Pasupathi Ragavan T{% endblock %}
+
+{% block content %}
+<section class="section-header fade-in">
+    <h2>Blog & Technical Deep-Dives</h2>
+    <p>Articles on AI-powered IoT telemetry, anomaly detection, microcontrollers, and hardware security.</p>
+</section>
+
+<div class="blog-grid fade-in">
+    {% for post in posts %}
+    <article class="blog-card">
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-card-img" loading="lazy">
+        <div class="blog-card-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                <span class="tech-tag" style="color: var(--accent-cyan);">{{ post.category }}</span>
+                <span style="color: var(--text-dim); font-size: 0.8rem;">⏱️ {{ post.read_time }} min read</span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.35;">
+                <a href="/blog/{{ post.slug }}" style="color: var(--text-main); text-decoration: none;">{{ post.title }}</a>
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">{{ post.excerpt }}</p>
+            <a href="/blog/{{ post.slug }}" class="project-link">Read Full Article →</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

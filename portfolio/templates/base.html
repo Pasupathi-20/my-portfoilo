@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_desc %}Pasupathi Ragavan T — Electronics & IoT Engineer specializing in AI Engineering, Embedded Systems, Real-Time Monitoring, and LLM Data Pipelines.{% endblock %}">
+    <title>{% block title %}Pasupathi Ragavan T — Electronics, IoT & AI Engineer{% endblock %}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="{% block og_title %}Pasupathi Ragavan T | IoT & AI Engineer{% endblock %}">
+    <meta property="og:description" content="{% block og_desc %}Portfolio featuring AI-integrated IoT diagnostic pipelines, embedded hardware systems, anomaly detection, and real-time alert engines.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pasupathis-portfoilo.onrender.com{{ request.path }}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/project_ai_diagnostic.png') }}">
+</head>
+<body>
+    <canvas id="ambientCanvas"></canvas>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header" id="siteHeader">
+        <a href="/" class="logo" aria-label="Pasupathi Ragavan T Homepage">
+            <span class="logo-badge">PR</span>
+            <span class="logo-text">Pasupathi <span>Ragavan</span></span>
+        </a>
+        
+        <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a></li>
+                <li><a href="/about" class="nav-link {% if request.path == '/about' %}active{% endif %}">About</a></li>
+                <li><a href="/projects" class="nav-link {% if request.path == '/projects' %}active{% endif %}">Projects</a></li>
+                <li><a href="/blog" class="nav-link {% if request.path.startswith('/blog') %}active{% endif %}">Blog</a></li>
+                <li><a href="/contact" class="nav-link {% if request.path == '/contact' %}active{% endif %}">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-controls">
+            <div class="status-badge" title="Active & Ready for Opportunities">
+                <span class="status-dot"></span>
+                <span>Open for AI & IoT Roles</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open Navigation Menu">☰</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Pasupathi Ragavan Thetharasan</h3>
+                <p>Electronics & IoT Engineer building intelligent automation systems, AI-powered diagnostic pipelines, and real-time hardware telemetry solutions.</p>
+                <div class="social-links" style="display: flex; gap: 0.75rem;">
+                    <a href="https://github.com/Pasupathi-20" target="_blank" rel="noopener" class="btn btn-ghost" style="padding: 0.4rem 0.8rem; font-size: 0.82rem;">GitHub</a>
+                    <a href="https://www.linkedin.com/in/pasupathi-ragavan-t-5660a1238" target="_blank" rel="noopener" class="btn btn-ghost" style="padding: 0.4rem 0.8rem; font-size: 0.82rem;">LinkedIn</a>
+                    <a href="mailto:pasupathiragavan2004@gmail.com" class="btn btn-ghost" style="padding: 0.4rem 0.8rem; font-size: 0.82rem;">Email</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About & Experience</a></li>
+                    <li><a href="/projects">Projects Showcase</a></li>
+                    <li><a href="/blog">Blog & Research</a></li>
+                    <li><a href="/contact">Get In Touch</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact Details</h4>
+                <ul>
+                    <li><span style="color: var(--text-muted);">Coimbatore, Tamil Nadu, India</span></li>
+                    <li><a href="mailto:pasupathiragavan2004@gmail.com">pasupathiragavan2004@gmail.com</a></li>
+                    <li><a href="tel:+918610033011">+91 86100 33011</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Pasupathi Ragavan T. Built with Python & Flask.</p>
+            <span>AI Engineering & IoT Automation</span>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">↑</button>
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Glassmorphic In-Page PDF Resume Preview Modal -->
+    <div class="modal-backdrop" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span style="font-size: 1.3rem;">📄</span>
+                    <h3 class="modal-title" id="resumeModalTitle">Pasupathi Ragavan T — Curriculum Vitae</h3>
+                </div>
+                <div class="modal-actions">
+                    <a href="{{ url_for('static', filename='Pasupathi Ragavan T.pdf') }}" download class="btn btn-cv" style="padding: 0.4rem 0.9rem; font-size: 0.82rem;">⬇ Download PDF</a>
+                    <button class="modal-close-btn" id="closeResumeModal" aria-label="Close Modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <iframe src="{{ url_for('static', filename='Pasupathi Ragavan T.pdf') }}" class="modal-iframe" title="Pasupathi Ragavan T Resume PDF"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

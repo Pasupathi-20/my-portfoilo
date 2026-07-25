@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}About — Pasupathi Ragavan T{% endblock %}
+{% block meta_desc %}Learn about Pasupathi Ragavan's background in Electronics & IoT Engineering, AI data pipelines, and experience at Imai Technologies.{% endblock %}
+
+{% block content %}
+<section class="section-header fade-in">
+    <h2>About Me</h2>
+    <p>Electronics & IoT Engineer · AI Data Pipeline Builder · Smart Automation</p>
+</section>
+
+<div class="stats-grid fade-in">
+    <div class="stat-card">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">AI & IoT Projects</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-num">1+</div>
+        <div class="stat-label">Yr Industry Experience</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-num">7.35</div>
+        <div class="stat-label">B.E. ECE CGPA</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Tech Skills & Tools</div>
+    </div>
+</div>
+
+<div class="contact-container fade-in" style="margin-top: 2rem;">
+    <div class="contact-info-card" style="grid-column: span 2;">
+        <h3 style="font-family: var(--font-display); font-size: 1.4rem;">Objective & Professional Summary</h3>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+            Electronics and IoT Engineer with hands-on experience in embedded systems, real-time monitoring, hardware-software integration, and automation projects. Skilled in Python, Raspberry Pi, ESP8266, REST APIs, cloud data logging, and sensor-based systems.
+        </p>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+            Built AI-integrated projects involving statistical anomaly detection (z-score / 2-sigma), LLM APIs (OpenAI & Groq), structured JSON outputs, and real-time alert engines. Strong interest in transitioning into <strong>AI engineering, intelligent automation, and backend-driven AI solutions</strong>.
+        </p>
+    </div>
+</div>
+
+<!-- Experience -->
+<section class="fade-in" style="margin-top: 3.5rem;">
+    <div class="section-header">
+        <h2>Work Experience</h2>
+        <p>Professional industry roles in embedded systems engineering and IoT deployments.</p>
+    </div>
+
+    <div class="timeline-list">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-date">16/04/2025 – Present</span>
+                <h3 class="timeline-title">Embedded Support Engineer</h3>
+                <div class="timeline-subtitle">Imai Technologies</div>
+                <ul style="color: var(--text-muted); font-size: 0.95rem; margin-left: 1.25rem; line-height: 1.7;">
+                    <li>Designed and deployed IoT-based automation systems integrating ESP8266, NodeMCU, and Raspberry Pi with cloud platforms for real-time data ingestion and monitoring.</li>
+                    <li>Configured Raspberry Pi GPIO interfaces to control relay arrays, sensors, and actuators — enabling rule-based automation logic analogous to AI inference pipelines.</li>
+                    <li>Programmed Wi-Fi-enabled microcontrollers for device-to-cloud data transfer, reducing manual monitoring effort by enabling continuous remote telemetry.</li>
+                    <li>Performed systematic fault detection and root-cause analysis on electronic systems, applying structured debugging methodologies transferable to AI/ML model validation.</li>
+                    <li>Assisted in end-to-end field deployment of smart systems, coordinating hardware setup, firmware flashing, and system testing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-date">31/07/2023 – 07/08/2023</span>
+                <h3 class="timeline-title">Student Trainee</h3>
+                <div class="timeline-subtitle">Enthu Technology</div>
+                <ul style="color: var(--text-muted); font-size: 0.95rem; margin-left: 1.25rem; line-height: 1.7;">
+                    <li>Built real-time environmental monitoring prototypes using Raspberry Pi, ESP32, and LoRa modules with cloud data logging — simulating IoT-to-cloud data pipeline architectures.</li>
+                    <li>Implemented sensor fusion workflows, collecting, processing, and visualizing structured data streams from multiple hardware sensors simultaneously.</li>
+                    <li>Gained foundational experience in embedded programming, communication protocols (UART, SPI, I2C), and event-driven system design.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section class="fade-in" style="margin-top: 3.5rem;">
+    <div class="section-header">
+        <h2>Education</h2>
+        <p>Academic qualifications in Electronics & Communication Engineering.</p>
+    </div>
+
+    <div class="timeline-list">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-date">Graduated 2025</span>
+                <h3 class="timeline-title">B.E – Electronics and Communication Engineering</h3>
+                <div class="timeline-subtitle">Coimbatore Institute of Engineering and Technology · CGPA: 7.35</div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-date">2021</span>
+                <h3 class="timeline-title">Senior Secondary Certificate (CBSE)</h3>
+                <div class="timeline-subtitle">ABCS KenBridge School</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

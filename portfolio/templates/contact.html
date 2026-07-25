@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Contact — Pasupathi Ragavan T{% endblock %}
+{% block meta_desc %}Get in touch with Pasupathi Ragavan for AI engineering roles, IoT project collaborations, and technical opportunities.{% endblock %}
+
+{% block content %}
+<section class="section-header fade-in">
+    <h2>Get In Touch</h2>
+    <p>Open for AI engineering roles, IoT automation projects, and technical collaborations.</p>
+</section>
+
+<div class="contact-container fade-in">
+    <!-- Contact Info Card -->
+    <div class="contact-info-card">
+        <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--text-main);">Contact Information</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Feel free to reach out via email or phone. I'm actively looking for opportunities in AI & IoT engineering.</p>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-item">
+            <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-detail">
+                <label>Email Address</label>
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <a href="mailto:pasupathiragavan2004@gmail.com">pasupathiragavan2004@gmail.com</a>
+                    <button class="btn btn-ghost copy-btn" data-copy="pasupathiragavan2004@gmail.com" style="padding: 0.2rem 0.6rem; font-size: 0.78rem;">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-item">
+            <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </div>
+            <div class="contact-detail">
+                <label>Phone Number</label>
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <a href="tel:+918610033011">+91 86100 33011</a>
+                    <button class="btn btn-ghost copy-btn" data-copy="+918610033011" style="padding: 0.2rem 0.6rem; font-size: 0.78rem;">Copy</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location -->
+        <div class="contact-item">
+            <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="contact-detail">
+                <label>Location</label>
+                <span>Coimbatore, Tamil Nadu, India</span>
+            </div>
+        </div>
+
+        <!-- Social Profiles -->
+        <div class="contact-item">
+            <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <div class="contact-detail">
+                <label>Social Profiles</label>
+                <div style="display: flex; gap: 0.5rem; margin-top: 0.4rem;">
+                    <a href="https://github.com/Pasupathi-20" target="_blank" rel="noopener" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.82rem;">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/pasupathi-ragavan-t-5660a1238" target="_blank" rel="noopener" class="btn btn-ghost" style="padding: 0.35rem 0.85rem; font-size: 0.82rem;">LinkedIn ↗</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form" id="contactForm">
+        <div>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 0.3rem; color: var(--text-main);">Send a Message</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Send an inquiry and get an automated response confirmation.</p>
+        </div>
+        
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Johnson" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="alex@company.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Tell me about your team or project..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitBtn" style="padding: 0.9rem 1.8rem; font-size: 1rem;">Send Message →</button>
+
+        <div id="aiReply" style="display:none;" class="ai-reply-box">
+            <div style="font-weight: 700; color: var(--accent-emerald); font-size: 0.88rem; margin-bottom: 0.3rem;">✦ Instant Confirmation from Pasupathi</div>
+            <p id="replyText" style="font-size: 0.92rem; line-height: 1.6;"></p>
+        </div>
+    </form>
+</div>
+{% endblock %}

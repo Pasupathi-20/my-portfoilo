@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} — Pasupathi Ragavan T{% endblock %}
+
+{% block content %}
+<article class="blog-post-view fade-in">
+    <div style="margin-bottom: 2rem;">
+        <span class="tech-tag" style="color: var(--accent-cyan); font-size: 0.85rem;">{{ post.category }}</span>
+        <h1 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin: 0.8rem 0 1rem;">{{ post.title }}</h1>
+        
+        <div style="display: flex; align-items: center; gap: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+            <span>By <strong>Pasupathi Ragavan T</strong></span>
+            <span>•</span>
+            <span>{{ post.date }}</span>
+            <span>•</span>
+            <span>{{ post.read_time }} min read</span>
+        </div>
+    </div>
+
+    <img src="{{ post.image }}" alt="{{ post.title }}" style="width: 100%; height: 360px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: 2.5rem;" loading="lazy">
+
+    <div class="blog-post-content">
+        {{ post.content | safe }}
+    </div>
+
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center;">
+        <a href="/blog" class="btn btn-ghost">← Back to Blog List</a>
+        {% if post.github %}
+        <a href="{{ post.github }}" target="_blank" rel="noopener" class="btn btn-primary">View Project Code on GitHub ↗</a>
+        {% endif %}
+    </div>
+</article>
+{% endblock %}

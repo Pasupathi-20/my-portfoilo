@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% block title %}Projects — Pasupathi Ragavan T{% endblock %}
+{% block meta_desc %}Explore Pasupathi Ragavan's real-world embedded systems, AI-powered IoT diagnostic pipelines, anomaly detection, and microcontroller projects.{% endblock %}
+
+{% block content %}
+<section class="section-header fade-in">
+    <h2>Projects & Engineering Work</h2>
+    <p>AI-integrated telemetry pipelines, IoT hardware prototypes, sensor networks, and edge automation.</p>
+</section>
+
+<!-- Filter & Search Controls -->
+<div class="project-filter-bar fade-in">
+    <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="projectSearchInput" class="search-input" placeholder="Search projects by tech (e.g. Python, Groq, ESP8266, MPU6050, Arduino)...">
+    </div>
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="filter-btn active" data-category="all">All Projects</button>
+        <button class="filter-btn" data-category="ai">AI & LLMs</button>
+        <button class="filter-btn" data-category="iot">IoT & Cloud</button>
+        <button class="filter-btn" data-category="embedded">Embedded & Hardware</button>
+    </div>
+</div>
+
+<!-- Projects Grid -->
+<div class="projects-grid fade-in" id="projectsGrid">
+    <!-- Project 1: AI Sensor Data Explainer -->
+    <div class="project-card" data-category="ai" data-keywords="python groq api llm gpt-4o anomaly detection z-score json ai sensor telemetry">
+        <div class="project-img-container">
+            <img src="{{ url_for('static', filename='images/project_ai_diagnostic.png') }}" alt="IoT Sensor Data Explainer AI Powered Diagnostic Pipeline" class="project-img" loading="lazy">
+            <span class="project-category-badge">AI & LLM Pipelines</span>
+        </div>
+        <div class="project-body">
+            <h3 class="project-title">IoT Sensor Data Explainer AI Diagnostic Pipeline</h3>
+            <p class="project-desc">Built an end-to-end AI data pipeline in Python that ingests multi-channel IoT sensor CSV streams, applies rolling z-score / 2-sigma anomaly detection algorithms, and sends structured results to GPT-4o-mini / LLaMA 3.3 via Groq API for plain-English diagnostic reports.</p>
+            <div class="project-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Groq API</span>
+                <span class="tech-tag">LLaMA 3.3</span>
+                <span class="tech-tag">Z-Score Algorithm</span>
+                <span class="tech-tag">JSON Schema</span>
+                <span class="tech-tag">Flask</span>
+            </div>
+            <div class="project-footer">
+                <a href="/blog/ai-sensor-diagnostic-pipeline" class="project-link">Read Deep-Dive →</a>
+                <a href="https://github.com/Pasupathi-20" target="_blank" rel="noopener" class="project-link" style="color: var(--text-muted);">GitHub ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2: Smart IoT Alert Engine -->
+    <div class="project-card" data-category="ai" data-keywords="groq api real-time ai alert engine llm python telemetry temperature vibration voltage">
+        <div class="project-img-container">
+            <img src="{{ url_for('static', filename='images/project_smart_alert.png') }}" alt="Smart IoT Alert System" class="project-img" loading="lazy">
+            <span class="project-category-badge">Real-Time AI Alerts</span>
+        </div>
+        <div class="project-body">
+            <h3 class="project-title">Smart IoT Alert System — Real Time AI Alert Engine</h3>
+            <p class="project-desc">AI-powered monitoring engine reading live IoT sensor data, classifying fault severity (CRITICAL / WARNING / NORMAL) using Groq LLM API with engineered prompts, and generating plain-English technician alert action items across 4 sensor channels.</p>
+            <div class="project-tech-tags">
+                <span class="tech-tag">Groq API</span>
+                <span class="tech-tag">Prompt Engineering</span>
+                <span class="tech-tag">Multi-Sensor Fusion</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">JSON Alerting</span>
+            </div>
+            <div class="project-footer">
+                <a href="/blog/smart-iot-alert-engine" class="project-link">Read Deep-Dive →</a>
+                <a href="https://github.com/Pasupathi-20" target="_blank" rel="noopener" class="project-link" style="color: var(--text-muted);">GitHub ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3: Bridge Health Monitoring -->
+    <div class="project-card" data-category="iot" data-keywords="iot nodemcu sensors cloud python telemetry bridge structural health monitoring mobile alert">
+        <div class="project-img-container">
+            <img src="{{ url_for('static', filename='images/project_bridge_monitoring.png') }}" alt="IoT Bridge Structural Health Monitoring" class="project-img" loading="lazy">
+            <span class="project-category-badge">IoT & Cloud</span>
+        </div>
+        <div class="project-body">
+            <h3 class="project-title">IoT Real-Time Bridge Structural Health Monitoring</h3>
+            <p class="project-desc">Engineered a distributed sensor network using IoT microcontrollers, cloud telemetry logging, and mobile alerting to monitor structural strain, vibration, and environmental load in real time.</p>
+            <div class="project-tech-tags">
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">NodeMCU</span>
+                <span class="tech-tag">Vibration Sensors</span>
+                <span class="tech-tag">Cloud Telemetry</span>
+                <span class="tech-tag">Python</span>
+            </div>
+            <div class="project-footer">
+                <a href="/blog/bridge-monitoring" class="project-link">Read Deep-Dive →</a>
+                <a href="https://github.com/Pasupathi-20/my-projects/tree/main/bridge-monitoring" target="_blank" rel="noopener" class="project-link" style="color: var(--text-muted);">GitHub ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 4: Smart Boom Barrier MPU6050 -->
+    <div class="project-card" data-category="embedded" data-keywords="mpu6050 nodemcu esp8266 c++ gyro accelerometer boom barrier position detection classification">
+        <div class="project-img-container">
+            <img src="{{ url_for('static', filename='images/project_boom_barrier.png') }}" alt="Smart Boom Barrier Position Detection" class="project-img" loading="lazy">
+            <span class="project-category-badge">Embedded & Sensors</span>
+        </div>
+        <div class="project-body">
+            <h3 class="project-title">Smart Boom Barrier Position Detection (MPU6050)</h3>
+            <p class="project-desc">Edge-detection system using MPU6050 accelerometer/gyroscope sensor data and a threshold classification algorithm to determine barrier arm states (open / closed / transitioning) for automated parking gates.</p>
+            <div class="project-tech-tags">
+                <span class="tech-tag">MPU6050</span>
+                <span class="tech-tag">NodeMCU</span>
+                <span class="tech-tag">ESP8266</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Gyro / Accelerometer</span>
+            </div>
+            <div class="project-footer">
+                <a href="https://github.com/Pasupathi-20/my-projects/tree/main/Booms-barrier-mpu6050" target="_blank" rel="noopener" class="project-link">View Code on GitHub ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 5: Circuit Breaker IoT -->
+    <div class="project-card" data-category="iot" data-keywords="esp8266 nodemcu circuit breaker fault detection relay control python flask iot lineman safety">
+        <div class="project-img-container">
+            <img src="{{ url_for('static', filename='images/project_circuit_breaker.png') }}" alt="IoT Circuit Breaker Safety System" class="project-img" loading="lazy">
+            <span class="project-category-badge">IoT & Safety</span>
+        </div>
+        <div class="project-body">
+            <h3 class="project-title">IoT Circuit Breaker Fault Detection & Remote Control</h3>
+            <p class="project-desc">IoT circuit breaker monitoring system designed for lineman protection in power distribution lines — reliable fault detection, automated system reset, and remote web control interface.</p>
+            <div class="project-tech-tags">
+                <span class="tech-tag">ESP8266</span>
+                <span class="tech-tag">NodeMCU</span>
+                <span class="tech-tag">Relay Control</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Python</span>
+            </div>
+            <div class="project-footer">
+                <a href="https://github.com/Pasupathi-20/my-projects/tree/main/circuit-breaker-iot" target="_blank" rel="noopener" class="project-link">View Code on GitHub ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 6: Rain Sensing Car Wiper -->
+    <div class="project-card" data-category="embedded" data-keywords="arduino rain sensor servo motor c++ automatic car wiper state machine">
+        <div class="project-img-container">
+            <img src="{{ url_for('static', filename='images/project_rain_wiper.png') }}" alt="Automatic Rain Sensing Car Wiper" class="project-img" loading="lazy">
+            <span class="project-category-badge">Arduino Hardware</span>
+        </div>
+        <div class="project-body">
+            <h3 class="project-title">Automatic Rain Sensing Wiper Control System</h3>
+            <p class="project-desc">Sensor-triggered state-machine driven actuator system using an Arduino microcontroller to autonomously respond to environmental rain inputs — foundational to feedback loops in automation.</p>
+            <div class="project-tech-tags">
+                <span class="tech-tag">Arduino Uno</span>
+                <span class="tech-tag">Rain Sensor</span>
+                <span class="tech-tag">Servo Motor</span>
+                <span class="tech-tag">C++</span>
+            </div>
+            <div class="project-footer">
+                <a href="/blog/rain-sensing-wiper" class="project-link">Read Deep-Dive →</a>
+                <a href="https://github.com/Pasupathi-20/my-projects/tree/main/rain-sensing-wipe" target="_blank" rel="noopener" class="project-link" style="color: var(--text-muted);">GitHub ↗</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Achievements Section -->
+<section class="fade-in" style="margin-top: 4rem;">
+    <div class="section-header">
+        <h2>Achievements & Awards</h2>
+        <p>Conferences, hackathons, and technical design workshops.</p>
+    </div>
+
+    <div class="skills-category-grid">
+        <div class="skill-category-card">
+            <div class="skill-cat-header">
+                <div class="skill-cat-icon">🏆</div>
+                <div class="skill-cat-title">National Conference on CIET</div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Attended and presented technical insights at the national-level electronics conference held at CIET.</p>
+        </div>
+
+        <div class="skill-category-card">
+            <div class="skill-cat-header">
+                <div class="skill-cat-icon">💡</div>
+                <div class="skill-cat-title">Smart India Hackathon</div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Participated in Smart India Hackathon at CIET, competing with innovative IoT smart system prototypes.</p>
+        </div>
+
+        <div class="skill-category-card">
+            <div class="skill-cat-header">
+                <div class="skill-cat-icon">🛠️</div>
+                <div class="skill-cat-title">PCB Design Workshop</div>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Completed hands-on practical workshop in custom schematic capture and PCB layout designing using EasyEDA.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
