@@ -1273,39 +1273,202 @@ main {
   transform: translateY(0);
 }
 
-/* Responsive Media Queries */
-@media (max-width: 900px) {
+/* Responsive Media Queries & Mobile Optimization */
+@media (max-width: 1024px) {
+  main {
+    padding: 4rem 4vw 3rem;
+  }
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+    padding: 1.5rem 0 2.5rem;
+  }
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .contact-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.75rem 4vw;
+  }
+  .logo-text {
+    font-size: 1.05rem;
+  }
+  .logo-badge {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+  .status-badge span:last-child {
+    display: none;
+  }
+  .status-badge {
+    padding: 0.35rem 0.5rem;
+  }
+  .header-controls {
+    gap: 0.5rem;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100vw;
+    max-height: calc(100vh - 62px);
+    overflow-y: auto;
+    background: var(--header-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.5rem 6vw;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 9999;
+    box-shadow: var(--shadow-lg);
+  }
+  .main-nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .main-nav .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .main-nav .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .main-nav .nav-link:hover, .main-nav .nav-link.active {
+    background: rgba(0, 242, 254, 0.08);
+  }
+  .mobile-toggle {
+    display: inline-flex;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 7vw, 2.4rem);
+    margin-bottom: 1rem;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-cta-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+
+  .terminal-window {
+    margin-top: 1rem;
+  }
+  .terminal-title {
+    font-size: 0.7rem;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .terminal-body {
+    padding: 0.85rem;
+    font-size: 0.78rem;
+  }
+  .terminal-json {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .skills-category-grid,
+  .project-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .project-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .filter-buttons-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  /* Prevent iOS zoom on input focus */
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .modal-backdrop {
+    padding: 0.5rem;
+  }
+  .modal-container {
+    height: 92vh;
+    border-radius: var(--radius-md);
+  }
+  .modal-header {
+    padding: 0.75rem 1rem;
+  }
+  .modal-title {
+    font-size: 0.95rem;
+  }
+
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .main-nav {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100vw;
-    background: var(--header-bg);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--border-light);
-    padding: 2rem 5vw;
-    display: none;
-  }
-  .main-nav.open {
-    display: block;
-  }
-  .main-nav .nav-list {
+  .footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+    text-align: center;
+    gap: 0.5rem;
   }
-  .mobile-toggle {
-    display: flex;
+}
+
+@media (max-width: 480px) {
+  .hero-cta-group {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 1.65rem;
+  }
+  .logo-text {
+    font-size: 0.95rem;
+  }
+  .site-header {
+    padding: 0.6rem 3vw;
+  }
+  main {
+    padding: 2.5rem 3.5vw 2.5rem;
   }
 }
